@@ -1,11 +1,11 @@
 from flask import Flask, request, render_template
-from packages.base64 import b64encode
+from base64 import b64encode
 import matplotlib.pyplot as plt
 import numpy as np
 import cv2
 import time
 from PIL import Image
-from packages import io
+import io
 
 
 app = Flask(__name__)
