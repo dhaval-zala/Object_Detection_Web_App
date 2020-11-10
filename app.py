@@ -1,6 +1,5 @@
 from flask import Flask, request, render_template
 from base64 import b64encode
-import matplotlib.pyplot as plt
 import numpy as np
 import cv2
 import time
@@ -26,7 +25,7 @@ def predict():
     img = request.files['file']
     print(img)
     
-    image_BGR = plt.imread(img)
+    image_BGR = Image.imread(img)
     h,w = image_BGR.shape[:2]
     
     print(h,w)
