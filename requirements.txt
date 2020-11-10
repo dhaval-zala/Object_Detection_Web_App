@@ -1,6 +1,5 @@
 Flask
 gunicorn
 opencv-python
-matplotlib
 numpy>=1.9.2
 pillow
