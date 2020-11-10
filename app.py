@@ -1,11 +1,11 @@
 from flask import Flask, request, render_template
-from base64 import b64encode
+from packages.base64 import b64encode
 import matplotlib.pyplot as plt
 import numpy as np
 import cv2
 import time
 from PIL import Image
-import io
+from packages import io
 
 
 app = Flask(__name__)
@@ -16,7 +16,7 @@ def home_page():
     return render_template('index.html')
 
 
-@app.route('/predict',methods=["POST"])
+@app.route('/predict',methods=["POST","GET"])
 def predict():
     '''
     For rendering results on HTML GUI
